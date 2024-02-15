@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "80f442cf-2538-477a-a816-bf6f300c387f",
+		"name": "Cv-maker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31070414"
+	},
+	"item": [
+		{
+			"name": "add-request",
+			"item": [
+				{
+					"name": "add-one",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Vakhtangi Baratashvili\",\r\n    \"address\": {\r\n        \"country\": \"Georgia\",\r\n        \"city\": \"Tbilisi\"\r\n    },\r\n    \"socials\": {\r\n        \"email\": \"baratashvilivaxo@gmail.com\",\r\n        \"facebook\": \"facebook.com/vakho_baratashvili\",\r\n        \"linkedIn\": \"linkedIn.com/vakho_baratashvili\",\r\n        \"GitHub\": \"github.com/vakho_baratashvili\"\r\n    },\r\n    \"aboutMe\": \"Motivated junior java developer\",\r\n    \"skills\": [\"java\", \"spring framework\", \"python\"],\r\n    \"experience\": [\r\n        {\r\n            \"name\": \"Agrotech\",\r\n            \"from\": 2023,\r\n            \"to\": 2024\r\n        }\r\n    ],\r\n    \"education\": [\r\n        {\r\n            \"name\": \"Tbilisi State University\",\r\n            \"from\": 2022\r\n        },\r\n        {\r\n            \"name\": \"Kutaisi International University\",\r\n            \"from\": 2020,\r\n            \"to\": 2022\r\n        }\r\n    ],\r\n    \"languages\": {\r\n        \"Georgian\": \"Native\",\r\n        \"English\": \"Limited working proficiency\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/add-one",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"add-one"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-many",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"fullName\": \"Lasha Gagnidze\",\r\n        \"address\": {\r\n            \"country\": \"Georgia\",\r\n            \"city\": \"Tchiatura\"\r\n         },\r\n        \"socials\": {\r\n            \"email\": \"lashadeveloper@gmail.com\",\r\n            \"facebook\": \"facebook.com/lasha_gagnidze\",\r\n            \"GitHub\": \"github.com/lasha_gagnidze\"\r\n        },\r\n        \"aboutMe\": \"Java developer\",\r\n        \"skills\": [\"java\", \"spring framework\"],\r\n        \"experience\": [\r\n            {\r\n                \"name\": \"Agrotech\",\r\n                \"from\": 2023,\r\n                \"to\": 2024\r\n            },\r\n            {\r\n                \"name\": \"Otium\",\r\n                \"from\": 2022,\r\n                \"to\": 2022\r\n            }\r\n        ],\r\n        \"education\": [\r\n            {\r\n                \"name\": \"Tbilisi State University\",\r\n                \"from\": 2022\r\n            }\r\n        ],\r\n        \"languages\": {\r\n            \"Georgian\": \"Native\",\r\n            \"English\": \"Limited working proficiency\",\r\n            \"Russian\": \"Limited working proficiency\"\r\n        }\r\n    },\r\n    {\r\n        \"fullName\": \"Sandro Ghughunishvili\",\r\n        \"address\": {\r\n            \"country\": \"Georgia\",\r\n            \"city\": \"Sachkhere\"\r\n         },\r\n        \"socials\": {\r\n            \"email\": \"sandroghughunishvili@gmail.com\"\r\n        },\r\n        \"aboutMe\": \"Motivated developer\",\r\n        \"skills\": [\"java\", \"PHP\"],\r\n        \"experience\": [\r\n            {\r\n                \"name\": \"Otium\",\r\n                \"from\": 2022,\r\n                \"to\": 2022\r\n            }\r\n        ],\r\n        \"education\": [\r\n            {\r\n                \"name\": \"Tbilisi State University\",\r\n                \"from\": 2022\r\n            }\r\n        ],\r\n        \"languages\": {\r\n            \"Georgian\": \"Native\",\r\n            \"English\": \"Limited working proficiency\"\r\n        }\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/add-many",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"add-many"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-social",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "social",
+									"value": "instagram",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "instagram.com/vakho_baratashvili",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/add/social/65ccfb806f90d73dcc760b53",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"add",
+								"social",
+								"65ccfb806f90d73dcc760b53"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-skill",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/add/skill/65ccfb806f90d73dcc760b53?skill=JavaScript",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"add",
+								"skill",
+								"65ccfb806f90d73dcc760b53"
+							],
+							"query": [
+								{
+									"key": "skill",
+									"value": "JavaScript"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-experience",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Otium\",\r\n    \"from\" : 2022,\r\n    \"to\": 2023\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/add/experience/65ccfb806f90d73dcc760b53",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"add",
+								"experience",
+								"65ccfb806f90d73dcc760b53"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-education",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tchiatura N1 school\",\r\n    \"from\": 2008,\r\n    \"to\": 2020\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/add/education/65ccfb806f90d73dcc760b53",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"add",
+								"education",
+								"65ccfb806f90d73dcc760b53"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-language",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "language",
+									"value": "German",
+									"type": "text"
+								},
+								{
+									"key": "level",
+									"value": "A1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/add/language/65ccfb806f90d73dcc760b53",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"add",
+								"language",
+								"65ccfb806f90d73dcc760b53"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get-request",
+			"item": [
+				{
+					"name": "get-all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/65cdf883b7e73744fce1a83a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"65cdf883b7e73744fce1a83a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "delete-request",
+			"item": [
+				{
+					"name": "delete-by-id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/delete/65cce2011f19dc61348e39d1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"delete",
+								"65cce2011f19dc61348e39d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-all",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "update-request",
+			"item": [
+				{
+					"name": "update-full-name",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fullName",
+									"value": "Vakhtangi Baratashvili",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/update/full-name/65ccfb806f90d73dcc760b53",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"update",
+								"full-name",
+								"65ccfb806f90d73dcc760b53"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-about-me",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "aboutMe",
+									"value": "Motivated junior java developer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/update/about-me/65ccfb806f90d73dcc760b53",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"update",
+								"about-me",
+								"65ccfb806f90d73dcc760b53"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Vakhtangi Baratashvili\",\r\n    \"socials\": {\r\n        \"email\": \"baratashvilivaxo@gmail.com\",\r\n        \"facebook\": \"facebook.com/vakho_baratashvili\",\r\n        \"linkedIn\": \"linkedIn.com/vakho_baratashvili\",\r\n        \"GitHub\": \"github.com/vakho_baratashvili\"\r\n    },\r\n    \"aboutMe\": \"Motivated junior java developer\",\r\n    \"skills\": [\"java\", \"spring framework\", \"python\"],\r\n    \"experience\": [\r\n        {\r\n            \"name\": \"Agrotech\",\r\n            \"from\": 2023,\r\n            \"to\": 2024\r\n        }\r\n    ],\r\n    \"education\": [\r\n        {\r\n            \"name\": \"Tbilisi State University\",\r\n            \"from\": 2022\r\n        },\r\n        {\r\n            \"name\": \"Kutaisi International University\",\r\n            \"from\": 2020,\r\n            \"to\": 2022\r\n        }\r\n    ],\r\n    \"languages\": {\r\n        \"Georgian\": \"Native\",\r\n        \"English\": \"Limited working proficiency\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/cv/update/65ccfb806f90d73dcc760b53",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"cv",
+								"update",
+								"65ccfb806f90d73dcc760b53"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
